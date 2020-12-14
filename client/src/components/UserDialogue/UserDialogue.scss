@@ -1,0 +1,76 @@
+@use '../../partials/fonts' as *;
+
+.dialogue {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+
+  &-escape {
+    display: none;
+  }
+
+  &-exit {
+    top: 15px;
+    left: 92%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &-container {
+    background: white;
+    width: 394px;
+    height: 530px;
+    position: relative;
+    border-radius: 4px;
+    top: 135px;
+    left: 40%;
+  }
+
+  &-container__title {
+    display: flex;
+    margin-left: 2.09375rem;
+    margin-right: 2.09375rem;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &-container__headers {
+    font-family: "Poppins-Medium";
+    font-size: 1rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    width: 35%;
+    text-align: center;
+
+    &::after {
+      content: " ";
+      display: block;
+      border-top: 2px solid #4aa4f2;
+      border-bottom: 2px solid #4aa4f2;
+      border-radius: 50px;
+      // margin-top: 4rem;
+    }
+  }
+
+  &-container__headers-mod {
+    font-family: "Poppins-Medium";
+    font-size: 1rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    width: 35%;
+    text-align: center;
+    opacity: 0.5;
+  }
+}
+
+.display {
+  display: none;
+}
+
+.exit {
+  display: none;
+}

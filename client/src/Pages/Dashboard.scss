@@ -1,0 +1,156 @@
+.dashboard {
+  margin-left: 3.625rem;
+  margin-right: 3.625rem;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  &__header {
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &-form {
+    width: 171px;
+    height: 254px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    background: #ffffff;
+    position: relative;
+  }
+
+  &-form__cancel {
+    top: -12px;
+    left: 94%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &-form__container {
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    margin-top: 1rem;
+    padding-bottom: 0.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-form__wrapper {
+    width: 40px;
+    height: 40px;
+    background: url("../assets/icons/add.svg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-color: #0a64ce;
+    border-radius: 64px;
+    cursor: pointer;
+  }
+
+  &-form__wrapper input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+  }
+
+  &-form__label {
+    padding-top: 0.5rem;
+    font-family: "Montserrat-Medium";
+    font-size: 0.625rem;
+    font-weight: bold;
+  }
+
+  &-form__title-label {
+    font-family: "Poppins-Bold";
+    border: none;
+    width: 147px;
+    border-bottom: 1px solid #c4c4c4;
+    outline: none;
+  }
+
+  &-form__description-label {
+    font-family: "Poppins-Medium";
+    opacity: 0.9;
+    color: black;
+    font-size: 0.625rem;
+    border: none;
+    width: 147px;
+    border-bottom: 1px solid #c4c4c4;
+    outline: none;
+    padding-bottom: 1rem;
+  }
+
+  &-form__goal-label {
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    font-weight: bold;
+  }
+
+  &-form__goal-input {
+    font-family: "Montserrat-Medium";
+    font-weight: bold;
+    opacity: 1;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    width: 147px;
+  }
+
+  &-form__goal-input-icon {
+    background-image: url("../assets/icons/step.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: right;
+  }
+
+  &-form__sub-wrapper {
+    margin-top: 0.5rem;
+    margin-left: 11px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  &-form__btn {
+    width: 148px;
+    height: 32px;
+    border-radius: 64px;
+    border: 1px solid #5bbf5f;
+    background-color: transparent;
+    color: #5bbf5f;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #5bbf5f;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #5bbf5f;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

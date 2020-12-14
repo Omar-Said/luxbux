@@ -1,0 +1,173 @@
+@use '../../partials/fonts' as *;
+
+.userbucket {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &__list-item {
+    width: 171px;
+    height: 254px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: #ffffff;
+    margin-left: 1.5rem;
+    box-shadow: 0px 6px 16px #6e6e6e29;
+    background: #ffffff;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0px 6px 16px #6e6e6e6c;
+    }
+  }
+
+  &__list-cancel {
+    top: -12px;
+    left: 94%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__list-wrapper {
+    width: 147px;
+    border-bottom: 1px solid #e9e9e9;
+    margin: 0 auto;
+    height: 73px;
+  }
+
+  &__list-title {
+    margin: 0;
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+    margin-top: 7px;
+  }
+
+  &__list-desc {
+    margin: 0;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin-top: 4px;
+    margin-bottom: 8.5px;
+  }
+
+  &__list-subwrapper {
+    display: flex;
+    margin-left: 11px;
+    margin-right: 11px;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 147px;
+  }
+
+  &__list-percent {
+    margin: 0;
+    color: #4aa4f2;
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &__list-goal {
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &__list-raised {
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+    color: #000000;
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  &__list-progressbar {
+    height: 5px;
+    width: 147px;
+    border-radius: 50px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: #e9e9e9;
+  }
+
+  &__list-filler {
+    background: #4aa4f2;
+    height: 100%;
+    border-radius: inherit;
+    transition: width 0.2s ease-in;
+    max-width: 100%;
+  }
+
+  &__list-flex {
+    display: flex;
+    width: 147px;
+    justify-content: space-between;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-top: 5px;
+  }
+
+  &__list-txt {
+    margin: 0;
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+  }
+
+  &-list__btn {
+    width: 148px;
+    height: 32px;
+    border-radius: 64px;
+    border: 1px solid #5bbf5f;
+    background-color: transparent;
+    color: #5bbf5f;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #5bbf5f;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #5bbf5f;
+    }
+  }
+
+  &-list__btn-cancel {
+    width: 148px;
+    height: 32px;
+    border-radius: 64px;
+    border: 1px solid #bf5b5b;
+    background-color: transparent;
+    color: #bf5b5b;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #bf5b5b;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #bf5b5b;
+    }
+  }
+}
+
+.userbucket-img {
+  width: 171px;
+  height: 77px;
+  border-radius: 4px 4px 0px 0px;
+  object-fit: cover;
+}

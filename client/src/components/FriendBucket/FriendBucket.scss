@@ -1,0 +1,231 @@
+@use '../../partials/fonts' as *;
+
+.friendsbucket {
+  padding: 0;
+
+  &__list-item {
+    display: flex;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid #e9e9e9;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__user-wrapper {
+    display: flex;
+    width: 171px;
+  }
+
+  &__user {
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  &__location {
+    font-family: "Poppins-Medium";
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  &__user-img {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #e9e9e9;
+    border-radius: 64px;
+    margin-right: 1rem;
+  }
+
+  &__container {
+    width: 171px;
+    height: 320px;
+    margin: 0;
+    margin-left: 1.5rem;
+    box-shadow: 0px 6px 16px #6e6e6e29;
+    border-radius: 4px;
+
+    &:hover {
+      box-shadow: 0px 6px 16px #6e6e6e6c;
+    }
+  }
+
+  &__img {
+    width: 171px;
+    height: 77px;
+    border-radius: 4px 4px 0px 0px;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    width: 147px;
+    border-bottom: 1px solid #e9e9e9;
+    margin: 0 auto;
+    height: 73px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+  }
+
+  &__desc {
+    margin: 0;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin-top: 4px;
+    margin-bottom: 8.5px;
+  }
+
+  &__subwrapper {
+    display: flex;
+    margin-left: 11px;
+    margin-right: 11px;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 147px;
+  }
+
+  &__perc {
+    margin: 0;
+    color: #4aa4f2;
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &__goal {
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &__progressbar {
+    height: 5px;
+    width: 147px;
+    border-radius: 50px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: #e9e9e9;
+  }
+
+  &__list-filler {
+    background: #4aa4f2;
+    height: 100%;
+    border-radius: inherit;
+    transition: width 0.2s ease-in;
+    max-width: 100%;
+  }
+
+  &__flex {
+    display: flex;
+    width: 147px;
+    justify-content: space-between;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-top: 5px;
+  }
+
+  &__txt {
+    margin: 0;
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+  }
+
+  &__raised {
+    font-family: "Poppins-Medium";
+    font-size: 10px;
+    color: #000000;
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  &__amount {
+    font-family: "Montserrat-Medium";
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    margin-top: 0.5rem;
+    width: 146px;
+    margin-left: 11px;
+    border-top: 1px solid #c4c4c4;
+  }
+
+  &__input {
+    border: 1px solid #c4c4c4;
+    background-image: url("../../assets/icons/step.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 7.5rem;
+    font-family: "Montserrat-Medium";
+    font-weight: bold;
+    opacity: 1;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5rem;
+    width: 148px;
+    height: 34px;
+    border: 1px solid #c4c4c4;
+    border-radius: 64px;
+    padding-left: 1rem;
+
+    &:hover {
+      border: 1px solid #4aa4f2;
+    }
+
+    &:active {
+      border: 1px solid #4aa4f2;
+    }
+  }
+  &__btn {
+    width: 148px;
+    height: 32px;
+    border-radius: 64px;
+    border: 1px solid #5bbf5f;
+    background-color: transparent;
+    color: #5bbf5f;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #5bbf5f;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #5bbf5f;
+    }
+  }
+
+  &__btn-cancel {
+    width: 148px;
+    height: 32px;
+    border-radius: 64px;
+    border: 1px solid #bf5b5b;
+    background-color: transparent;
+    color: #bf5b5b;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__none {
+    margin: 0;
+    font-family: "Poppins-Medium";
+    font-size: 20px;
+    color: #c4c4c4;
+  }
+}

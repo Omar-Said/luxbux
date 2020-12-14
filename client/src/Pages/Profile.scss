@@ -1,0 +1,139 @@
+@use '../partials/fonts' as *;
+
+.profile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+
+  &-container {
+    background: white;
+    width: 523px;
+    height: 426px;
+    position: relative;
+    border-radius: 4px;
+    top: 187px;
+    left: 40%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-shadow: 0px 3px 6px #00000029;
+  }
+
+  &__title {
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+  }
+
+  &-form {
+    display: flex;
+    height: 100%;
+    margin-top: 1.5rem;
+  }
+
+  &-form__left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90px;
+    margin: 0;
+  }
+
+  &-form__container {
+    width: 90px;
+    height: 90px;
+    background-color: #e9e9e9;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-form__img {
+    width: 40px;
+    height: 40px;
+    background: url("../assets/icons/add.svg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-color: #0a64ce;
+    border-radius: 64px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &-form__img input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+  }
+
+  &-form__label {
+    font-family: "Montserrat-Medium";
+    font-size: 0.625rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  &-form__wrapper {
+    width: 327px;
+    margin-left: 1.875rem;
+  }
+
+  &__input {
+    width: 327px;
+    height: 48px;
+    border-radius: 64px;
+    border: 1px solid #c4c4c4;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #4aa4f2;
+    }
+    &:hover {
+      border: 1px solid #4aa4f2;
+    }
+  }
+
+  &__labels {
+    font-size: 0.75rem;
+    font-family: "Montserrat-Medium";
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    margin: auto;
+    background-color: #4aa4f2;
+    font-size: 0.75rem;
+    border: none;
+    width: 327px;
+    height: 48px;
+    border-radius: 64px;
+    color: #ffffff;
+    font-family: "Montserrat-Bold";
+    cursor: pointer;
+    margin-top: 1rem;
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

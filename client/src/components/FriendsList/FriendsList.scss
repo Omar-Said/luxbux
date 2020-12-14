@@ -1,0 +1,204 @@
+.friendlist {
+  display: flex;
+  height: 50px;
+  margin-top: 3rem;
+
+  &__header {
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__link {
+    margin-top: 15px;
+    font-size: 0.75rem;
+    color: #4aa4f2;
+    border-bottom: 1px solid #4aa4f2;
+    width: 88px;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-family: "Montserrat-Medium";
+  }
+  &__container {
+    width: 171px;
+    height: 320px;
+    height: 50px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container-header {
+    font-family: "Montserrat-Medium";
+    color: #000000;
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 5.35rem;
+  }
+
+  &__container-add {
+    margin-top: 3.125rem;
+    cursor: pointer;
+  }
+}
+
+.friendDialogue {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+
+  &-exit {
+    position: relative;
+    top: 15px;
+    left: 97%;
+    cursor: pointer;
+  }
+
+  &-container {
+    position: relative;
+    width: 394px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    background: #ffffff;
+    top: 135px;
+    left: 40%;
+    padding: 0;
+    list-style-type: none;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 700px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(13deg, #4aa4f2 14%, #4aa4f2 63%);
+      border-radius: 15px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(13deg, #c7ceff 14%, #f9d4ff 64%);
+    }
+    &::-webkit-scrollbar-track {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: inset 7px 10px 12px #f0f0f0;
+    }
+  }
+
+  &-container__header {
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+
+  &-container__fields {
+    width: 327px;
+    height: 48px;
+    border-radius: 64px;
+    border: 1px solid #c4c4c4;
+    padding-left: 1rem;
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  &-container__fields-icon {
+    background-image: url("../../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    background-size: 1.2rem;
+    border: 1px solid #c4c4c4;
+    padding-left: 3rem;
+    color: #000000;
+    opacity: 0.5;
+    font-weight: bold;
+    font-family: "Montserrat-Medium";
+    outline: none;
+
+    &:focus {
+      border: 2px solid #4aa4f2;
+    }
+    &:hover {
+      border: 2px solid #4aa4f2;
+    }
+  }
+
+  &-container__title {
+    font-family: "Poppins-Bold";
+    font-size: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  &-container__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  &-container__avatar {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #e9e9e9;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+  }
+
+  &-container__name {
+    font-family: "Poppins-Bold";
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  &-container__loc {
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin: 0;
+  }
+
+  &-container__btn {
+    width: 95px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 64px;
+    border: none;
+    color: #4aa4f2;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    margin-left: auto;
+    border: 1px solid #4aa4f2;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4aa4f2;
+      color: #ffffff;
+    }
+  }
+
+  //   &-container__btn-active {
+  //     width: 95px;
+  //     height: 32px;
+  //     background-color: #4aa4f2;
+  //     border-radius: 64px;
+  //     border: none;
+  //     color: #ffffff;
+  //     font-family: "Poppins-Medium";
+  //     font-size: 0.625rem;
+  //     margin-left: auto;
+  //     border: 1px solid #4aa4f2;
+  //   }
+}

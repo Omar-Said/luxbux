@@ -1,0 +1,114 @@
+.wallet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+
+  &-container {
+    width: 523px;
+    height: 309px;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px #00000029;
+    top: 245px;
+    left: 40%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  &-exit {
+    top: 15px;
+    left: 96%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &-title {
+    margin: 0;
+    font-family: "Poppins-Bold";
+    font-size: 1rem;
+    margin-bottom: 1.625rem;
+    margin-top: 1.25rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    border-bottom: 1px solid #e9e9e9;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  &-subtitle {
+    margin: 0;
+    font-family: "Poppins-light";
+    font-family: 0.875rem;
+    margin-right: 0.325rem;
+  }
+
+  &-create {
+    border: 1px solid #4aa4f2;
+    background-color: #ffffff;
+    border-radius: 64px;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    font-family: "Poppins-Medium";
+    font-size: 0.625rem;
+    color: #4aa4f2;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &-value {
+    font-family: "Poppins-Bold";
+    margin-left: 1rem;
+  }
+
+  &-subscript {
+    font-family: "Poppins-Bold";
+    font-size: 0.875rem;
+  }
+
+  &-subscript__amount {
+    font-family: "Poppins-Bold";
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-input {
+    border: 1px solid #c4c4c4;
+    background-image: url("../../assets/icons/step.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 9.2rem;
+    font-family: "Montserrat-Medium";
+    font-weight: bold;
+    opacity: 1;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5rem;
+    width: 184px;
+    height: 48px;
+    border: 1px solid #c4c4c4;
+    border-radius: 64px;
+    padding-left: 1rem;
+    margin-right: 1.5rem;
+
+    &:focus {
+      border: 1px solid #4aa4f2;
+    }
+    &:hover {
+      border: 1px solid #4aa4f2;
+    }
+  }
+
+  &-fineprint {
+    font-family: "Poppins-Medium";
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+}

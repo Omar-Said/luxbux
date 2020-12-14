@@ -1,0 +1,76 @@
+@use '../partials/fonts' as *;
+
+.landing-page {
+  &__container {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 0;
+    background-image: url("../assets/images/HERO.png");
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: rgba($color: #323232, $alpha: 0.6);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    margin: auto;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    width: 23%;
+    margin-bottom: 1rem;
+    font-family: "Montserrat-Bold";
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  &__sub-title {
+    color: #ffffff;
+    margin: auto;
+    width: 21%;
+    margin-top: 0;
+    font-size: 0.75rem;
+    line-height: 1.0625rem;
+    font-family: "Poppins-light";
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__btn {
+    background-color: #5bbf5f;
+    border-radius: 64px;
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+    border: none;
+    width: 237px;
+    height: 54px;
+    color: #ffffff;
+    font-family: "Poppins-Medium";
+    outline: none;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+}
+
+.test {
+  width: 1280px;
+  margin: auto;
+}
