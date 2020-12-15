@@ -21,12 +21,12 @@ const LandingPage = () => {
           GIVE YOUR FRIENDS A HELPING HAND
         </h1>
         <h3 className="landing-page__sub-title">
-          VBUCKS MAKES IT POSSIBLE FOR ANYONE TO DONATE TO THEIR FRIENDS SO THEY
+          LUXBUX MAKES IT POSSIBLE FOR ANYONE TO DONATE TO THEIR FRIENDS SO THEY
           CAN ACHIEVE THEIR GOALS
         </h3>
 
         <button onClick={handleDialogue} className="landing-page__btn">
-          START A VBUCKET
+          START A LUXBUCKET
         </button>
       </div>
       <div className="test">

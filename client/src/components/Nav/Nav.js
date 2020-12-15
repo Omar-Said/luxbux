@@ -109,7 +109,7 @@ function Nav(props) {
               onClick={handleDialogue}
               className="nav__loggedout-signup-btn"
             >
-              START A VBUCKET
+              START A LUXBUCKET
             </button>
           </div>
           {dialogue && <UserDialogue handleExit={handleExit} />}

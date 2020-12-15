@@ -36,7 +36,6 @@ class FriendBucket extends React.Component {
         type: "error",
       });
     } else {
-      console.log("why did this fire");
       if (userId != null) {
         const db = firebase.firestore();
         this.setState({ number: raisedValue.value });

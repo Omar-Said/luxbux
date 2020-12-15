@@ -235,7 +235,7 @@ class Dashboard extends React.Component {
       });
   };
 
-  resetForm = () => {
+  resetForm = (e) => {
     this.setState({
       title: "",
       description: "",
