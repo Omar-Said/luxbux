@@ -4,9 +4,9 @@ import "./FriendsList.scss";
 import React, { useState } from "react";
 import closeWindow from "../../assets/icons/closeWindow.svg";
 
-const FriendsList = ({ friendsData, mapUser }) => {
+const FriendsList = ({ friendsData, mapUser, resetState }) => {
   const [friendDialogue, setFriendDialogue] = useState(false);
-  console.log(friendsData);
+  // console.log(friendsData);
   // const [isActive, setisActive] = useState(false);
 
   const handleDialogue = () => {
@@ -29,8 +29,9 @@ const FriendsList = ({ friendsData, mapUser }) => {
 
   const user = app.auth().currentUser;
   const addFriend = (e, username, avatar, location) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     mapUser(e.target.value, username, avatar, location);
+    resetState();
   };
 
   const filtered = friendsData.filter((friend) => friend.id !== user.uid);

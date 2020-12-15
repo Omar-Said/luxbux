@@ -10,8 +10,6 @@ import React from "react";
 import close from "../../assets/icons/close.svg";
 
 const UserBucket = ({ userData, mapBuckets }) => {
-  console.log();
-
   const Collect = (e) => {
     if (e) {
       toast("Success! Your money will be deposited in 7 days", {

@@ -93,6 +93,7 @@ class Dashboard extends React.Component {
                   });
                   this.mapBuckets();
                   this.mapUsers();
+                  this.findFriendsBuckets();
                 })
                 .catch(function (error) {
                   console.error("Error writing document: ", error);
@@ -320,6 +321,7 @@ class Dashboard extends React.Component {
             <FriendsList
               friendsData={this.state.users}
               mapUser={this.mapUser}
+              resetState={this.resetState}
             />
           ) : (
             <div>...Loading</div>

@@ -173,8 +173,9 @@ class FriendBucket extends React.Component {
 
   render() {
     const { friendsBucket } = this.props;
+    console.log(friendsBucket);
 
-    if (friendsBucket.length) {
+    if (friendsBucket && friendsBucket.length) {
       return (
         <section>
           <ul className="friendsbucket">
