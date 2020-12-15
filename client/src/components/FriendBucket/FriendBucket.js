@@ -172,7 +172,7 @@ class FriendBucket extends React.Component {
 
   render() {
     const { friendsBucket } = this.props;
-    console.log(friendsBucket);
+    // console.log(friendsBucket);
 
     if (friendsBucket && friendsBucket.length) {
       return (
@@ -259,7 +259,7 @@ class FriendBucket extends React.Component {
                                     }}
                                   >
                                     <label className="friendsbucket__amount">
-                                      AMOUNT
+                                      Amount
                                       <input
                                         className="friendsbucket__input friendsbucket__input-icon"
                                         name="number"

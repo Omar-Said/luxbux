@@ -129,10 +129,16 @@ class Dashboard extends React.Component {
       .collection("buckets")
       .get()
       .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          this.setState({
-            buckets: [...this.state.buckets, { id: doc.id, ...doc.data() }],
+        let arr = querySnapshot;
+        let emptyArray = [];
+
+        arr.forEach((item) => {
+          emptyArray.push({
+            buckets: { id: item.id, ...item.data() },
           });
+        });
+        this.setState({
+          buckets: emptyArray,
         });
       });
   };
@@ -144,6 +150,8 @@ class Dashboard extends React.Component {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
+          const emptyArr = [];
+          emptyArr.forEach((doc) => {});
           this.setState({
             users: [...this.state.users, { id: doc.id, ...doc.data() }],
           });

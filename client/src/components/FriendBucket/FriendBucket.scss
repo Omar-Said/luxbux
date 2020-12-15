@@ -58,6 +58,7 @@
     height: 77px;
     border-radius: 4px 4px 0px 0px;
     object-fit: cover;
+    display: block;
   }
 
   &__wrapper {
@@ -71,6 +72,7 @@
     margin: 0;
     font-family: "Poppins-Bold";
     font-size: 1rem;
+    padding-top: 7px;
   }
 
   &__desc {
@@ -148,7 +150,6 @@
     font-family: "Montserrat-Medium";
     font-size: 0.75rem;
     font-weight: bold;
-    margin-bottom: 5rem;
   }
 
   &__form {

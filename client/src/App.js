@@ -5,9 +5,7 @@ import LandingPage from "./Pages/LandingPage";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
 import Nav from "./components/Nav/Nav";
-// import Profile from "./Pages/Profile";
 import Dashboard from "./Pages/Dashboard";
-// import Wallet from "./components/Wallet/Wallet";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
