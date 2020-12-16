@@ -9,6 +9,8 @@ import Dashboard from "./Pages/Dashboard";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+export const walletContext = React.createContext();
+
 const App = () => {
   const [walletValue, setWalletValue] = useState(0);
   toast.configure();
@@ -30,6 +32,7 @@ const App = () => {
             path="/dashboard"
             component={Dashboard}
             otherprops={handleChangeWalletValue}
+            walletValue={walletValue}
           />
           {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
           {/* <PrivateRoute

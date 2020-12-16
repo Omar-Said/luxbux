@@ -48,25 +48,25 @@
   }
 
   &-form__wrapper {
-    // width: 40px;
-    // height: 40px;
-    // background: url("../assets/icons/add.svg");
-    // overflow: hidden;
-    // background-repeat: no-repeat;
-    // background-position-y: center;
-    // background-position-x: center;
-    // background-color: #0a64ce;
-    // border-radius: 64px;
-    // cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: url("../assets/icons/add.svg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-color: #0a64ce;
+    border-radius: 64px;
+    cursor: pointer;
   }
 
   &-form__wrapper input {
-    // display: block !important;
-    // width: 157px !important;
-    // height: 57px !important;
-    // opacity: 0 !important;
-    // overflow: hidden !important;
-    // cursor: pointer;
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
   }
 
   &-form__label {

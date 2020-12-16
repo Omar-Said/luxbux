@@ -13,14 +13,23 @@ class FriendBucket extends React.Component {
     id: "",
     raised: "",
     number: 0,
-    hasWallet: "",
-    value: "",
-    walletId: "",
+    value: 0,
   };
 
   componentDidMount() {
-    this.baseState = this.state;
-    this.mapUserWallet();
+    this.setState({
+      ...this.state,
+      value: this.props.walletValue,
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.walletValue !== prevProps.walletValue) {
+      this.setState({
+        ...this.state,
+        value: this.props.walletValue,
+      });
+    }
   }
 
   handleDonation = (e, userId, bucketId) => {
@@ -68,7 +77,8 @@ class FriendBucket extends React.Component {
                 console.log("Document successfully written!");
                 this.setState(
                   {
-                    ...this.baseState,
+                    ...this.state,
+                    number: 0,
                     raised:
                       Number(this.state.number) +
                       Number(querySnapshot.data().raised),
@@ -106,9 +116,7 @@ class FriendBucket extends React.Component {
           if (doc.id) {
             this.setState(
               {
-                hasWallet: true,
                 value: doc.data().value,
-                walletId: doc.id,
               },
               () => {
                 this.props.otherprops(this.state.value);
@@ -155,12 +163,12 @@ class FriendBucket extends React.Component {
             .then((response) => {
               console.log("Document successfully written!");
               this.setState({
-                ...this.baseState,
+                ...this.state,
+                number: 0,
                 value:
                   Number(querySnapshot[0].value) - Number(this.state.number),
               });
               this.mapUserWallet();
-              this.props.otherprops(this.state.value);
             });
         })
 
@@ -172,7 +180,6 @@ class FriendBucket extends React.Component {
 
   render() {
     const { friendsBucket } = this.props;
-    // console.log(friendsBucket);
 
     if (friendsBucket && friendsBucket.length) {
       return (

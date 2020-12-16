@@ -169,7 +169,10 @@ function Nav(props) {
             {logoutDialogue && (
               <Link to="/">
                 <img
-                  onClick={() => app.auth().signOut()}
+                  onClick={() => {
+                    props.otherprops(0);
+                    return app.auth().signOut();
+                  }}
                   src={logout}
                   className="tooltip"
                   alt="log out"

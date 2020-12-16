@@ -10,15 +10,12 @@ const Profile = ({ history, ...props }) => {
   const [image, setImage] = useState(null);
   const [url, setUrl] = useState("");
   const storage = firebase.storage();
-  console.log(url);
 
   const handleImageUpload = (e) => {
     if (e.target.files[0]) {
       setImage(e.target.files[0]);
     }
   };
-
-  console.log("image: ", image);
 
   const handleProfile = (e) => {
     e.preventDefault();
@@ -49,7 +46,6 @@ const Profile = ({ history, ...props }) => {
               const db = firebase.firestore();
               const bio = biography.value;
               const loc = location.value;
-              console.log(url);
               db.collection("users")
                 .doc(userId)
                 .update({
@@ -63,6 +59,7 @@ const Profile = ({ history, ...props }) => {
                 .catch(function (error) {
                   console.error("Error writing document: ", error);
                 });
+              document.getElementById("profileImage").value = null;
               props.handleProfileDialogueExit();
             }
           });
@@ -90,6 +87,7 @@ const Profile = ({ history, ...props }) => {
                   accept="image/*"
                   multiple={false}
                   required
+                  id="profileImage"
                 />
               </div>
             </div>

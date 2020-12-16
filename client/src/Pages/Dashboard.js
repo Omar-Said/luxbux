@@ -94,6 +94,7 @@ class Dashboard extends React.Component {
                   this.mapBuckets();
                   this.mapUsers();
                   this.findFriendsBuckets();
+                  document.getElementById("bucketImage").value = null;
                 })
                 .catch(function (error) {
                   console.error("Error writing document: ", error);
@@ -244,6 +245,7 @@ class Dashboard extends React.Component {
   };
 
   resetForm = (e) => {
+    document.getElementById("bucketImage").value = null;
     this.setState({
       title: "",
       description: "",
@@ -272,6 +274,7 @@ class Dashboard extends React.Component {
                   accept="image/*"
                   multiple={false}
                   required
+                  id="bucketImage"
                 />
               </div>
               <label className="dashboard-form__label">Add Photo</label>
@@ -339,6 +342,7 @@ class Dashboard extends React.Component {
               friendsBucket={this.state.friendsBucket}
               resetState={this.resetState}
               otherprops={this.props.otherprops}
+              walletValue={this.props.walletValue}
             />
           ) : (
             <div>...Loading</div>
