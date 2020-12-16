@@ -20,7 +20,7 @@ const PrivateRoute = ({
             walletValue={walletValue}
           />
         ) : (
-          <Redirect to={"/login"} />
+          <Redirect to={"/"} />
         );
       }}
     />

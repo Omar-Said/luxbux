@@ -73,7 +73,7 @@ const FriendsList = ({ friendsData, mapUser, resetState }) => {
                 .sort((a, b) => b.timestamp - a.timestamp)
                 .map((data) => {
                   return (
-                    <li key={data.id}>
+                    <li key={data.id} className="ok">
                       <div className="friendDialogue-container__wrapper">
                         <img
                           className="friendDialogue-container__avatar"
