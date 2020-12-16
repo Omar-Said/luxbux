@@ -88,10 +88,6 @@ function Nav(props) {
     setLogoutDialogue(true);
   };
 
-  // const handleLogoutDialogueExit = () => {
-  //   setLogoutDialogue(false);
-  // };
-
   const isValid = avatar ? "loggedIn" : "loggedOut";
 
   return (

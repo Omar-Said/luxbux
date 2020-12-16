@@ -41,7 +41,6 @@ class Dashboard extends React.Component {
   handleBucket = (e) => {
     e.preventDefault();
     const { title, description, goal } = e.target.elements;
-    console.log(title.value, description.value, goal.value);
 
     const user = app.auth().currentUser;
     const storage = firebase.storage();
@@ -61,7 +60,6 @@ class Dashboard extends React.Component {
           .child(this.state.image.name)
           .getDownloadURL()
           .then((url) => {
-            console.log(url);
             this.setState({
               url: url,
             });
@@ -116,7 +114,6 @@ class Dashboard extends React.Component {
       this.setState({
         image: e.target.files[0],
       });
-      console.log(this.state.image);
     }
   };
 
@@ -171,7 +168,6 @@ class Dashboard extends React.Component {
       avatar: avatar,
       location: location,
     });
-    console.log(friendId, friendUsername);
   };
 
   findFriendsBuckets = () => {

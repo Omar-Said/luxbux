@@ -9,8 +9,7 @@ const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
-      const { email, password, username, location } = event.target.elements;
-      console.log(email, password, username, location);
+      const { email, password, username } = event.target.elements;
       try {
         await app
           .auth()

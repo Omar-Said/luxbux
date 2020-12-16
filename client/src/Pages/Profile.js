@@ -36,7 +36,6 @@ const Profile = ({ history, ...props }) => {
           .child(image.name)
           .getDownloadURL()
           .then((url) => {
-            console.log(url);
             setUrl(url);
             return url;
           })

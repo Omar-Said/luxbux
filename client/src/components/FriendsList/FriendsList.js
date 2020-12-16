@@ -6,8 +6,6 @@ import closeWindow from "../../assets/icons/closeWindow.svg";
 
 const FriendsList = ({ friendsData, mapUser, resetState }) => {
   const [friendDialogue, setFriendDialogue] = useState(false);
-  // console.log(friendsData);
-  // const [isActive, setisActive] = useState(false);
 
   const handleDialogue = () => {
     setFriendDialogue(true);
@@ -17,28 +15,14 @@ const FriendsList = ({ friendsData, mapUser, resetState }) => {
     setFriendDialogue(false);
   };
 
-  // const onSelect = (e, username, avatar, location) => {
-  //   addFriend(e, username, avatar, location);
-  //   activeButton();
-  // };
-
-  // const activeButton = () => {
-  //   setisActive(true);
-  //   console.log(isActive);
-  // };
-
   const user = app.auth().currentUser;
+
   const addFriend = (e, username, avatar, location) => {
-    // console.log(e.target.value);
     mapUser(e.target.value, username, avatar, location);
     resetState();
   };
 
   const filtered = friendsData.filter((friend) => friend.id !== user.uid);
-
-  // const btn = isActive
-  //   ? "friendDialogue-container__btn-active"
-  //   : "friendDialogue-container__btn";
 
   return (
     <section className="friendlist">
@@ -115,12 +99,3 @@ const FriendsList = ({ friendsData, mapUser, resetState }) => {
 };
 
 export default FriendsList;
-
-// onClick={
-//   ((e) =>
-//     addFriend(
-//       e,
-//       data.username,
-//       data.avatar,
-//       data.location
-//     )
