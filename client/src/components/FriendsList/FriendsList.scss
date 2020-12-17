@@ -1,3 +1,5 @@
+@use '../../partials/fonts' as *;
+
 .friendlist {
   display: flex;
   height: 50px;
@@ -188,17 +190,4 @@
       color: #ffffff;
     }
   }
-
-  //   &-container__btn-active {
-  //     width: 95px;
-  //     height: 32px;
-  //     background-color: #4aa4f2;
-  //     border-radius: 64px;
-  //     border: none;
-  //     color: #ffffff;
-  //     font-family: "Poppins-Medium";
-  //     font-size: 0.625rem;
-  //     margin-left: auto;
-  //     border: 1px solid #4aa4f2;
-  //   }
 }
