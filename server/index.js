@@ -50,6 +50,6 @@ app.post("/checkout", async (req, res) => {
   res.json({ error, status });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 
 app.listen(PORT, () => console.log("Listening on port 8080"));

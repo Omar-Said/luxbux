@@ -54,6 +54,13 @@
     align-items: center;
   }
 
+  &-form__user {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
   &-form__img {
     width: 40px;
     height: 40px;
