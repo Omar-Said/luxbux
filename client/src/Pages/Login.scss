@@ -8,7 +8,6 @@
   &-form {
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
 
   &-form__labels {
@@ -44,7 +43,6 @@
   }
 
   &-form__btn {
-    margin: auto;
     background-color: #4aa4f2;
     font-size: 0.75rem;
     border: none;
@@ -55,5 +53,21 @@
     font-family: "Montserrat-Bold";
     cursor: pointer;
     outline: none;
+    margin-top: 8.7rem;
+  }
+
+  &-form__signup {
+    font-family: "Montserrat-Medium";
+    font-size: 0.725rem;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  &-form__link {
+    color: #4aa4f2;
+    cursor: pointer;
   }
 }

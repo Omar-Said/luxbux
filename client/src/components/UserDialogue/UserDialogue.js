@@ -45,7 +45,7 @@ function UserDialogue(props) {
           </h1>
         </div>
 
-        {loginToggle && <LogIn />}
+        {loginToggle && <LogIn handleSignUp={handleSignUp} />}
         {signUpToggle && <SignUp />}
       </div>
     </div>

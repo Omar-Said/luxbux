@@ -61,7 +61,6 @@ const Profile = ({ history, ...props }) => {
                 .catch(function (error) {
                   console.error("Error writing document: ", error);
                 });
-              // document.getElementById("profileImage").value = null;
               props.handleProfileDialogueExit();
             }
           });

@@ -18,11 +18,14 @@ class Dashboard extends React.Component {
     buckets: [],
     users: [],
     friendsBucket: [],
+    file: null,
+    friendsList: [],
   };
 
   componentDidMount() {
     this.baseState = this.state;
     this.fetchAll();
+    this.getFriendsList();
   }
 
   fetchAll = () => {
@@ -113,6 +116,7 @@ class Dashboard extends React.Component {
     if (e.target.files[0]) {
       this.setState({
         image: e.target.files[0],
+        file: URL.createObjectURL(e.target.files[0]),
       });
     }
   };
@@ -168,6 +172,28 @@ class Dashboard extends React.Component {
       avatar: avatar,
       location: location,
     });
+  };
+
+  getFriendsList = () => {
+    const db = firebase.firestore();
+    const user = app.auth().currentUser;
+    const userId = user.uid;
+
+    db.collection("users")
+      .doc(userId)
+      .collection("friends")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          this.setState({
+            friendsList: [
+              ...this.state.friendsList,
+              { id: doc.id, ...doc.data() },
+            ],
+          });
+        });
+        console.log(this.state.friendsList);
+      });
   };
 
   findFriendsBuckets = () => {
@@ -241,12 +267,12 @@ class Dashboard extends React.Component {
   };
 
   resetForm = (e) => {
-    document.getElementById("bucketImage").value = null;
     this.setState({
       title: "",
       description: "",
       goal: "",
       image: "",
+      file: null,
     });
   };
 
@@ -262,19 +288,30 @@ class Dashboard extends React.Component {
               src={close}
               alt="cancel-bucket"
             />
-            <div className="dashboard-form__container">
-              <div className="dashboard-form__wrapper">
-                <input
-                  onChange={this.handleImageUpload}
-                  type="file"
-                  accept="image/*"
-                  multiple={false}
-                  required
-                  id="bucketImage"
-                />
+            {this.state.file && (
+              <img
+                src={this.state.file}
+                className="dashboard-form__container-upload"
+                alt="file"
+                id="hello"
+              />
+            )}
+            {!this.state.file && (
+              <div className="dashboard-form__container">
+                <div className="dashboard-form__wrapper">
+                  <input
+                    onChange={this.handleImageUpload}
+                    type="file"
+                    accept="image/*"
+                    multiple={false}
+                    required
+                    id="bucketImage"
+                  />
+                </div>
+                <label className="dashboard-form__label">Add Photo</label>
               </div>
-              <label className="dashboard-form__label">Add Photo</label>
-            </div>
+            )}
+
             <div className="dashboard-form__sub-wrapper">
               <input
                 className="dashboard-form__title-label"
@@ -327,6 +364,7 @@ class Dashboard extends React.Component {
           {this.state.users ? (
             <FriendsList
               friendsData={this.state.users}
+              friendsList={this.state.friendsList}
               mapUser={this.mapUser}
               resetState={this.resetState}
             />

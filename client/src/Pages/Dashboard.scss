@@ -47,6 +47,14 @@
     align-items: center;
   }
 
+  &-form__container-upload {
+    width: 171px;
+    height: 77px;
+    border-radius: 4px 4px 0px 0px;
+    object-fit: cover;
+    display: block;
+  }
+
   &-form__wrapper {
     width: 40px;
     height: 40px;

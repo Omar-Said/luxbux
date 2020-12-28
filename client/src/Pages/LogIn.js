@@ -4,7 +4,7 @@ import app from "../firebase.js";
 import { AuthContext } from "../Auth";
 import "./Login.scss";
 
-const LogIn = ({ history }) => {
+const LogIn = ({ history, ...props }) => {
   const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();
@@ -47,6 +47,12 @@ const LogIn = ({ history }) => {
         <button className="login-form__btn" type="submit">
           LOGIN
         </button>
+        <p className="login-form__signup">
+          Don't have a Luxbux account?{" "}
+          <span onClick={props.handleSignUp} className="login-form__link">
+            Sign Up Here!
+          </span>
+        </p>
       </form>
     </div>
   );
