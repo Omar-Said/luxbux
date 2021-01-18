@@ -19,13 +19,11 @@ class Dashboard extends React.Component {
     users: [],
     friendsBucket: [],
     file: null,
-    // friendsList: [],
   };
 
   componentDidMount() {
     this.baseState = this.state;
     this.fetchAll();
-    // this.getFriendsList();
   }
 
   fetchAll = () => {
@@ -173,28 +171,6 @@ class Dashboard extends React.Component {
       location: location,
     });
   };
-
-  // getFriendsList = () => {
-  //   const db = firebase.firestore();
-  //   const user = app.auth().currentUser;
-  //   const userId = user.uid;
-
-  //   db.collection("users")
-  //     .doc(userId)
-  //     .collection("friends")
-  //     .get()
-  //     .then((querySnapshot) => {
-  //       querySnapshot.forEach((doc) => {
-  //         this.setState({
-  //           friendsList: [
-  //             ...this.state.friendsList,
-  //             { id: doc.id, ...doc.data() },
-  //           ],
-  //         });
-  //       });
-  //       console.log(this.state.friendsList);
-  //     });
-  // };
 
   findFriendsBuckets = () => {
     const user = app.auth().currentUser;

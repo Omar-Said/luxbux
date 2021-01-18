@@ -13,6 +13,23 @@ body {
   background: #f9f9f9;
   margin: 0;
 
+  @media only screen and (max-width: 1023px) {
+    &::before {
+      content: "Site under 1024px is under construction, please use desktop";
+      color: white;
+      display: block;
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+    }
+  }
+
   &::-webkit-scrollbar {
     width: 7px;
     height: 5px;
