@@ -131,10 +131,13 @@ class Wallet extends React.Component {
   };
 
   handleToken = async (token) => {
-    const response = await axios.post("http://localhost:8080/checkout", {
-      token,
-      number: this.state.number,
-    });
+    const response = await axios.post(
+      process.env.REACT_APP_API_URL + "/checkout",
+      {
+        token,
+        number: this.state.number,
+      }
+    );
     const { status } = response.data;
     if (status === "success") {
       toast("Success! Check email for details", {
