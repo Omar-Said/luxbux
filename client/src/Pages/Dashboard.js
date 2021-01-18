@@ -19,13 +19,13 @@ class Dashboard extends React.Component {
     users: [],
     friendsBucket: [],
     file: null,
-    friendsList: [],
+    // friendsList: [],
   };
 
   componentDidMount() {
     this.baseState = this.state;
     this.fetchAll();
-    this.getFriendsList();
+    // this.getFriendsList();
   }
 
   fetchAll = () => {
@@ -174,27 +174,27 @@ class Dashboard extends React.Component {
     });
   };
 
-  getFriendsList = () => {
-    const db = firebase.firestore();
-    const user = app.auth().currentUser;
-    const userId = user.uid;
+  // getFriendsList = () => {
+  //   const db = firebase.firestore();
+  //   const user = app.auth().currentUser;
+  //   const userId = user.uid;
 
-    db.collection("users")
-      .doc(userId)
-      .collection("friends")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          this.setState({
-            friendsList: [
-              ...this.state.friendsList,
-              { id: doc.id, ...doc.data() },
-            ],
-          });
-        });
-        console.log(this.state.friendsList);
-      });
-  };
+  //   db.collection("users")
+  //     .doc(userId)
+  //     .collection("friends")
+  //     .get()
+  //     .then((querySnapshot) => {
+  //       querySnapshot.forEach((doc) => {
+  //         this.setState({
+  //           friendsList: [
+  //             ...this.state.friendsList,
+  //             { id: doc.id, ...doc.data() },
+  //           ],
+  //         });
+  //       });
+  //       console.log(this.state.friendsList);
+  //     });
+  // };
 
   findFriendsBuckets = () => {
     const user = app.auth().currentUser;
@@ -364,7 +364,8 @@ class Dashboard extends React.Component {
           {this.state.users ? (
             <FriendsList
               friendsData={this.state.users}
-              friendsList={this.state.friendsList}
+              // friendsList={this.state.friendsList}
+              friendsBucket={this.state.friendsBucket}
               mapUser={this.mapUser}
               resetState={this.resetState}
             />

@@ -4,10 +4,7 @@ import "./FriendsList.scss";
 import React, { useState } from "react";
 import closeWindow from "../../assets/icons/closeWindow.svg";
 
-const FriendsList = ({ friendsData, mapUser, resetState, friendsList }) => {
-  console.log("FriendsData: ", friendsData);
-  console.log("FriendsList: ", friendsList);
-
+const FriendsList = ({ friendsData, mapUser, resetState, friendsBucket }) => {
   const [friendDialogue, setFriendDialogue] = useState(false);
 
   const handleDialogue = () => {
@@ -25,7 +22,9 @@ const FriendsList = ({ friendsData, mapUser, resetState, friendsList }) => {
     resetState();
   };
 
-  const filtered = friendsData.filter((friend) => friend.id !== user.uid);
+  const findFriends = friendsData.filter(
+    (o) => !friendsBucket.find((o2) => o.id === o2.id) && o.id !== user.uid
+  );
 
   return (
     <section className="friendlist">
@@ -56,7 +55,7 @@ const FriendsList = ({ friendsData, mapUser, resetState, friendsList }) => {
               <p className="friendDialogue-container__title">
                 Suggested friends
               </p>{" "}
-              {filtered
+              {findFriends
                 .sort((a, b) => b.timestamp - a.timestamp)
                 .map((data) => {
                   return (
