@@ -85,7 +85,7 @@ function Nav(props) {
   };
 
   const handleLogoutDialogue = () => {
-    setLogoutDialogue(true);
+    setLogoutDialogue(!logoutDialogue);
   };
 
   const isValid = avatar ? "loggedIn" : "loggedOut";
@@ -167,7 +167,7 @@ function Nav(props) {
                 <img
                   onClick={() => {
                     props.otherprops(0);
-                    return app.auth().signOut();
+                    return app.auth().signOut() && setLogoutDialogue(false);
                   }}
                   src={logout}
                   className="tooltip"
