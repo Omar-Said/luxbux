@@ -4,9 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 
 require("dotenv").config();
 
-const stripe = require("stripe")(
-  "sk_test_51HwH3xISPVtQRRm6fY26Qlpq96QeqAhgW6tgJMfZQYk1KpWavbF0yKtsyugG7HwoGDquliAbHnZfN1nFEO3ce0cw00h3bWGvnp"
-);
+const stripe = require("stripe")(process.env.API_KEY);
 
 const app = express();
 
@@ -20,7 +18,7 @@ app.post("/checkout", async (req, res) => {
   let error;
   let status;
   try {
-    const { product, token, number } = req.body;
+    const { token, number } = req.body;
 
     const customer = await stripe.customers.create({
       email: token.email,
